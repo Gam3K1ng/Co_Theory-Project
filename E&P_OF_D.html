@@ -1,0 +1,190 @@
+<!doctype HTML>
+<html>
+  <head>
+    <title>Color Theory</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+    $("#selectColor").bind('change', function(){
+      switch($(this).val()){
+        case "1":
+          textAlterPrimary();
+          break;
+
+        case "2":
+          textAlterSecondary();
+          break;
+
+        case "3":
+          textAlterTertiary();
+          break;
+});
+      function textAlterPrimary()
+        {
+          document.getElementById("textAlter1").innerHTML = "Red, yellow and blue: In traditional color theory (used in paint and pigments),<br /> primary colors are the 3 pigment colors that can not be mixed or formed by any combination of other colors.<br /> All other colors are derived from these 3 hues.";
+
+          var img = document.getElementById("ColorWheel01");
+          img.src = "file:////Users/sanchezrudy/Documents/colorTheory_Proj/Prim_Color02.jpg";
+          return false;
+        }
+
+        function textAlterSecondary()
+          {
+            document.getElementById("textAlter1").innerHTML = "Green, orange and purple: These are the colors formed by mixing the primary colors.";
+
+            var img = document.getElementById("ColorWheel01");
+            img.src = "file:///Users/sanchezrudy/Documents/colorTheory_Proj/Sec_Color02.jpg"
+            return false;
+          }
+
+        function textAlterTertiary()
+          {
+            document.getElementById("textAlter1").innerHTML = "Yellow-orange, red-orange, red-purple, blue-purple, blue-green & yellow-green:<br /> These are the colors formed by mixing a primary and a secondary color.<br /> That's why the hue is a two word name, such as blue-green, red-violet, and yellow-orange."
+
+            var img = document.getElementById("ColorWheel01")
+            img.src = "file:///Users/sanchezrudy/Documents/colorTheory_Proj/Tert_Color02.jpg"
+          }
+
+        function textAlterAnalogous()
+          {
+            document.getElementById("textAlter2").innerHTML = "Analogous colors are any three colors which are side by side on a 12 part color wheel,<br /> such as yellow-green, yellow, and yellow-orange.<br /> Usually one of the three colors predominates."
+          }
+
+        function textAlterComplementary()
+          {
+            document.getElementById("textAlter2").innerHTML = "A complementary color scheme is one that uses colors directly across from each other on the color wheel.<br /> This can be accomplished by using two colors or hues that are opposites such as red and green or violet and yellow.<br /> In this color scheme any two complements, all the semi-neutrals and the neutral they produce can be used.<br /> Black and white can also be used.<br /> Since you can choose from varying colors and hues which can give a bold and dramatic effect,<br /> this color scheme is best used for dramatic, strong, or bold statements."
+          }
+
+        function textAlterSComplementary()
+          {
+            document.getElementById("textAlter2").innerHTML = "A split complimentary color scheme is similar to complimentary but instead of just two colors directly opposite on the color wheel,<br /> two of the three colors are adjacent to one of the colors that is opposite.<br /> More simply, choose one color and use the color on each side of its complement<br /> (eg., blue, yellow-orange and red-orange).<br /> Any three adjacent primary, secondary, and tertiary colors can be used, plus the complement of the middle hue.<br /> This complement is used subordinately and to produce semi-neutrals of the three colors while maintaining color harmony.<br /> Black and white can also be used."
+          }
+
+        function textAlterTriadic()
+          {
+            document.getElementById("textAlter2").innerHTML = "A triadic color scheme are colors that are an equal distant from each other on the color wheel.<br /> Any three colors equidistant around the color wheel form a triad and can be used in this color scheme (eg., red, yellow and blue).<br /> Semi-neutrals are mixed using two of the colors in the triad and the third can be added to further neutralize the pair.<br /> Black and white can also be used.<br /> This can create a very balanced scheme."
+          }
+
+        function textAlterTetradic()
+          {
+            document.getElementById("textAlter2").innerHTML = "A tetradic color scheme is one using four or more colors on the color wheel (eg., green, violet, red and yellow)."
+          }
+
+        function textAlterDiadic()
+          {
+            document.getElementById("textAlter2").innerHTML = "A diadic color scheme is one using two colors that are two colors apart on the color wheel (eg., red and orange)."
+          }
+    </script>
+
+    <style text="type/css">
+      table {border:2px solid;
+            border-collapse:collapse;}
+      body {text-align:center;
+            background-color:#4aa1ff;
+            font-family:Arial;
+            color:white;}
+
+      .spanBorder {border:2px black solid;}
+
+      .dropdown1 {
+        position;relative;
+        display:inline-block;
+      }
+
+      .dropdown-content1 {
+        display:none;
+        position:absolute;
+        background-color:#4aa1ff;
+        min-width:160px;
+        box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+      }
+
+      .dropdown1:hover .dropdown-content1 {
+        display:block;
+      }
+
+      .dropdown2 {
+        position;relative;
+        display:inline-block;
+      }
+
+      .dropdown-content2 {
+        display:none;
+        position:absolute;
+        background-color:#4aa1ff;
+        min-width:160px;
+        box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+      }
+
+      .dropdown2:hover .dropdown-content2 {
+        display:block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Color Theory</h1>
+    <table border="2px" align="center">
+      <tr>
+        <th colspan="100%" height="30px">
+          <div class="dropdown1">
+            <span>
+              Color:(hover me!)
+            </span>
+          <div class="dropdown-content1">
+            <p>A color circle, based on red, yellow and blue, is traditional in the field of art.
+              <br /> Sir Isaac Newton developed the first circular diagram of colors in 1666.
+              <br /> Since then, scientists and artists have studied and designed numerous variations of this concept.
+              <br /> Differences of opinion about the validity of one format over another continue to provoke debate.
+              <br/> In reality, any color circle or color wheel which presents a logically arranged sequence of pure hues has merit.
+            </p>
+          </div>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <select id="selectColor">
+          <option>Select</option>
+          <option value="1">Primary Color</option>
+          <option value="2">Secondary Color</option>
+          <option value="3">Tertiary Color</option>
+        </select>
+      </tr>
+
+      <tr>
+        <th colspan="100%" id="textAlter1">Info</th>
+      </tr>
+    </table>
+    <img src="file:///Users/sanchezrudy/Documents/colorTheory_Proj/Co_TheoryWHEEL02.jpg" alt="Image Not Found" style="width:225px;height:225px;" id="ColorWheel01"/>
+    <table border="2px" align="center">
+      <tr>
+        <th colspan="100%" height="30px">
+          <div class="dropdown2">
+            <span>
+              Color Harmony:(hover me!)
+            </span>
+            <div class="dropdown-content2">
+              <p>There are multiple pieces to the puzzle of color harmony, such as Analogous,
+                <br /> Complementary, Split-Complementary, Tetradic, Triadic, and Diadic color.</p>
+            </div>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td><button onClick="textAlterAnalogous();">Analogous Color</button></td>
+        <td><button onClick="textAlterComplementary();">Complementary Color</button></td>
+        <td><button onClick="textAlterSComplementary();">Split-Complementary Color</button></td>
+        <td><button onClick="textAlterTriadic();">Triadic Color</button></td>
+        <td><button onClick="textAlterTetradic();">Tetradic Color</button></td>
+        <td><button onClick="textAlterDiadic();">Diadic Color</button></td>
+      </tr>
+
+      <tr>
+        <th colspan="100%" id="textAlter2">Info</th>
+      </tr>
+    </table>
+    <img src="file:///Users/sanchezrudy/Documents/colorTheory_Proj/Co_TheoryWHEEL02.jpg" alt="Image Not Found" style="width:225px;height:225px" id="color"/>
+
+    <h3>Hue:</h3>
+  </body>
+</html>
