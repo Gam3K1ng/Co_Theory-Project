@@ -5,21 +5,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script>
-    $("#selectColor").bind('change', function(){
-      switch($(this).val()){
-        case "1":
-          textAlterPrimary();
-          break;
-
-        case "2":
-          textAlterSecondary();
-          break;
-
-        case "3":
-          textAlterTertiary();
-          break;
-  }
-});
       function textAlterPrimary()
         {
           document.getElementById("textAlter1").innerHTML = "Red, yellow and blue: In traditional color theory (used in paint and pigments),<br /> primary colors are the 3 pigment colors that can not be mixed or formed by any combination of other colors.<br /> All other colors are derived from these 3 hues.";
@@ -144,12 +129,9 @@
         </th>
       </tr>
       <tr>
-        <select id="selectColor">
-          <option>Select</option>
-          <option value="1">Primary Color</option>
-          <option value="2">Secondary Color</option>
-          <option value="3">Tertiary Color</option>
-        </select>
+        <td><button onClick="textAlterPrimary()">Primary Color</button></td>
+        <td><button onClick="textAlterSecondary()">Secondary Color</button></td>
+        <td><button onClick="textAlterTertiary()">Tertiary Color</button></td>
       </tr>
 
       <tr>
